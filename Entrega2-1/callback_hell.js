@@ -28,3 +28,14 @@ readdir(inbox, (error, files) => {
     });
   });
 });
+
+const readDirectory = (inbox) => {
+  return new Promise((resolve, reject) => {
+    const readir = readdir(inbox)
+    if (readir) {
+      return resolve (readir)
+    } else {
+      return reject(console.log("Error: File error"))
+    }
+  })
+};
