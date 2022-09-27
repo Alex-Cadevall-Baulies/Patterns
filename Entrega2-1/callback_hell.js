@@ -1,3 +1,4 @@
+// Callback hell
 const {
   readdir,
   readFile,
@@ -11,31 +12,38 @@ const outbox = join(__dirname, "outbox");
 
 const reverseText = str =>
   str
-  .split("")
-  .reverse()
-  .join("");
+    .split("")
+    .reverse()
+    .join("");
 
-// Read and reverse contents of text files in a directory
-readdir(inbox, (error, files) => {
-  if (error) return console.log("Error: Folder inaccessible");
-  files.forEach(file => {
-    readFile(join(inbox, file), "utf8", (error, data) => {
-      if (error) return console.log("Error: File error");
+
+const llegirDirectori = (readdir, inbox) => {
+      return new Promise((resolve, reject) => {
+        readdir(inbox);
+        if (error) reject(console.log("Error: Folder inaccessible"))
+        else {
+          console.log("Arxius llegits")
+          resolve(files)
+        }
+      })
+    };
+
+llegirDirectori(readdir, inbox)
+  .then(files => { return files })
+  .then(files => {
+    files.forEach(file => {
+      readFile(join(inbox, file), "utf8", (error, data) => {
+        if (error) return console.log("Error: File error")
+      })
+    })
+  })
+  .then(files => {
+    files.forEach(file => {
       writeFile(join(outbox, file), reverseText(data), error => {
         if (error) return console.log("Error: File could not be saved!");
         console.log(`${file} was successfully saved in the outbox!`);
-      });
-    });
-  });
-});
-
-const readDirectory = (inbox) => {
-  return new Promise((resolve, reject) => {
-    const readir = readdir(inbox)
-    if (readir) {
-      return resolve (readir)
-    } else {
-      return reject(console.log("Error: File error"))
-    }
+      })
+    })
   })
-};
+  .catch(err => console.log(err))
+
