@@ -1,4 +1,3 @@
-// Callback hell
 const {
   readdir,
   readFile,
