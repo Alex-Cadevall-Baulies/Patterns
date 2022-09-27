@@ -15,8 +15,12 @@ export class Jugadors {
         };
     }
 
+    getAll() {
+        return this.#player
+    }
+
     get(value) {
-        this.#player[value]
+        return this.#player[value]
     };
 
     setChanges(username, email) {

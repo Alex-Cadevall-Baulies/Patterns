@@ -2,6 +2,11 @@ import { Jugadors } from "./jugadors.js";
 
 export class Marcador {
 
+    constructor() {
+        this.#game = ""
+        this.#player = getAll()
+        }
+
     MarcadorActual () {
         jugador1 = this.#player.username
         puntuacio1 = 0
@@ -13,5 +18,7 @@ export class Marcador {
         }
     }
 
+    marcadorGeneral() {
+        
+    }
 }
-
