@@ -1,14 +1,9 @@
-/*
-## app.js crida a les classes creades:
-- Registra jugadors
-- Sap quins jugadors estan jugant
-- Guarda punts al marcador
-*/
 import { Jugadors } from "./jugadors.js";
+import { Marcador } from "./joc.js";
 
-const registerPlayer =  (username, email) => {
+const registerPlayer = (username, email) => {
     let player = {
-        "userId" : userID = () => {
+        "userId": userID = () => {
             var result = '';
             var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             var charactersLength = characters.length;
@@ -17,12 +12,40 @@ const registerPlayer =  (username, email) => {
             }
             return result + this.players.length;
         },
-        "username" : username,
-        "email" : email
+        "username": username,
+        "email": email
     };
 
     this.players.push(player)
-    console.log(player)
-    console.log(this.players.join(''))
+    console.log(`jugador creat: ${player}`)
     return player
 };
+
+const newScore = (game, username, score) => {
+    const jugador = this.playerBase.filter((username) => { return username.username })
+
+    const marcadorResultat = (game, jugador, score) => {
+        let missatge = (`joc: ${joc} | user : ${jugador} | score : ${puntuacio}`)
+        console.log(`puntuació registrada`)
+        return missatge
+    }
+
+    this.marcador.push(marcadorResultat(game, jugador, score))
+    console.log(missatge)
+}
+
+const checkPlayers = (username) => {
+    let checkedPlayer = this.players.find((player) => {
+        player.username === username
+
+        if (player.username !== username) { console.log(`Jugador ${username} no trobat. Pendent de registrar`) 
+        return null}
+    })
+    
+    console.log(checkedPlayer)
+}
+
+const checkScoreBoard = () => {
+        console.log(this.marcador.join(''))
+        return this.marcador.join('')
+    }
