@@ -34,8 +34,8 @@ const newScore = (game, username, score) => {
     console.log(missatge)
 }
 
-const checkPlayers = (username) => {
-    let checkedPlayer = this.players.find((player) => {
+const findPlayer = (username) => {
+    let checkedPlayer = this.playerBase.find((player) => {
         player.username === username
 
         if (player.username !== username) { console.log(`Jugador ${username} no trobat. Pendent de registrar`) 
@@ -43,6 +43,11 @@ const checkPlayers = (username) => {
     })
     
     console.log(checkedPlayer)
+}
+
+const checkPlayerList = () => {
+    console.log(this.playerBase.join(''))
+    return this.playerBase.join('')
 }
 
 const checkScoreBoard = () => {
