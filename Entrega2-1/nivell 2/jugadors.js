@@ -18,7 +18,7 @@ export class Jugadors {
             "email" : email
         };
 
-        this.players.push(player)
+        this.#players.push(player)
         return player
     }
 
