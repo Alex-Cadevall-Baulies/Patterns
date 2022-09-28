@@ -24,3 +24,4 @@
 # Singleton: 
 - https://www.youtube.com/watch?v=C2NxMWQn85c
 - https://www.freecodecamp.org/news/singleton-design-pattern-with-javascript/
+- https://www.youtube.com/watch?v=7BExOvUgOwA
