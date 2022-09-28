@@ -4,6 +4,7 @@ export class Marcador {
 
     constructor() {
         this.marcador = []
+        this.playerBase = this.#players
 
         Object.freeze(this.marcador);
         Object.freeze(this);
@@ -11,7 +12,7 @@ export class Marcador {
     }
 
     newGame (game, username, score) {
-        const jugador = this.#players.filter((username) => {return username.username})
+        const jugador = this.playerBase.filter((username) => {return username.username})
 
         const marcadorResultat = (game, jugador, score) => {
         let missatge = (`joc: ${joc} | user : ${jugador} | score : ${puntuacio}`)
@@ -19,7 +20,6 @@ export class Marcador {
         }
 
         this.marcador.push(marcadorResultat(game, jugador, score))
-
     }
 
     getMarcador() {
