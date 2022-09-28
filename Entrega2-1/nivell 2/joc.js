@@ -6,15 +6,20 @@ export class Marcador {
         this.#marcador = []
     }
 
-    MarcadorActual (usernameOne, usernameTwo) {
-        let jugador1 = this.#players.filter((usernameOne) => {return usernameOne.username})
-        let puntuacio1 = 0
-        let jugador2 = this.#players.filter((usernameTwo) => {return usernameTwo.username})
-        let puntuacio2 = 0
+    newGame (game, username, score) {
+        const jugador = this.#players.filter((username) => {return username.username})
 
-        const marcadorActual = (jugador1,  puntuacio1, jugador2, puntuacio2) => {
-        console.log(`user : ${jugador1} | score : ${puntuacio1}`);
-        console.log(`user: ${jugador2} | score : ${puntuacio2}`)
+        const marcadorResultat = (game, jugador, score) => {
+        let missatge = (`joc: ${joc} | user : ${jugador} | score : ${puntuacio}`)
+        return missatge
         }
+
+        this.#marcador.push(marcadorResultat(game, jugador, score))
+
+    }
+
+    getMarcador() {
+        console.log(this.#marcador.join(''))
+        return this.#marcador.join('')
     }
 }
