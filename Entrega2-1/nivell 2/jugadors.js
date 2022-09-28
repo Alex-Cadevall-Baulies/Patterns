@@ -1,30 +1,46 @@
 export class Jugadors {
     constructor() {
-        this.#player = {
-            username : "username",
-            email : "email",
-            userID : () => {
+        this.#players = []
+    }
+
+    newPlayer (username, email) {
+        let player = {
+            "userId" : userID = () => {
                 var result = '';
                 var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                 var charactersLength = characters.length;
-                for (i = 0; i < 6; i++) {
+                for (i = 0; i < 5; i++) {
                     result += characters.charAt(Math.floor(Math.random() * charactersLength))
                 }
-                return result;
-            }
+                return result + this.players.length;
+            },
+            "username" : username,
+            "email" : email
         };
+
+        this.players.push(player)
+        return player
     }
 
     getAll() {
-        return this.#player
+        console.log(this.#players)
+        return this.#players
     }
 
-    get(value) {
+    getPlayerByIndex(value) {
+        console.log(this.#player[value])
         return this.#player[value]
     };
 
-    setChanges(username, email) {
-        this.#player.username = username;
-        this.#player.email = email
+    getPlayerByUsername(username){
+        let searchedPlayer = this.#players.filter(username)
+
+        console.log(searchedPlayer)
+        return searchedPlayer
+    }
+
+    setChanges(index, username, email) {
+        this.#player[index].username = username;
+        this.#player[index].email = email
     }
 }
