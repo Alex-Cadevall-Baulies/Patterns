@@ -3,7 +3,11 @@ import { Jugadors } from "./jugadors.js";
 export class Marcador {
 
     constructor() {
-        this.#marcador = []
+        this.marcador = []
+
+        Object.freeze(this.marcador);
+        Object.freeze(this);
+        Marcador.instance = this
     }
 
     newGame (game, username, score) {
@@ -14,12 +18,12 @@ export class Marcador {
         return missatge
         }
 
-        this.#marcador.push(marcadorResultat(game, jugador, score))
+        this.marcador.push(marcadorResultat(game, jugador, score))
 
     }
 
     getMarcador() {
-        console.log(this.#marcador.join(''))
-        return this.#marcador.join('')
+        console.log(this.marcador.join(''))
+        return this.marcador.join('')
     }
 }
