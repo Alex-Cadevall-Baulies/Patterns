@@ -1,7 +1,7 @@
 export class Jugadors {
     constructor() {
         this.#players = []
-    }
+    };
 
     newPlayer (username, email) {
         let player = {
@@ -20,27 +20,15 @@ export class Jugadors {
 
         this.#players.push(player)
         return player
-    }
-
-    getAll() {
-        console.log(this.#players)
-        return this.#players
-    }
-
-    getPlayerByIndex(value) {
-        console.log(this.#player[value])
-        return this.#player[value]
     };
 
-    getPlayerByUsername(username){
-        let searchedPlayer = this.#players.filter(username)
-
-        console.log(searchedPlayer)
-        return searchedPlayer
-    }
+    getAll() {
+        console.log(this.#players.join(''))
+        return this.#players.join('')
+    };
 
     setChanges(index, username, email) {
         this.#player[index].username = username;
         this.#player[index].email = email
-    }
+    };
 }
