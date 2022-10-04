@@ -1,13 +1,20 @@
-import { Jugadors } from "./jugadors.js";
+const Jugadors = require("./jugadors.js")
 
-export class Marcador {
+class Marcador {
 
     constructor() {
         this.marcador = []
-        this.playerBase = this.players
+        this.playerBase = []
 
         Object.freeze(this.marcador);
         Object.freeze(this);
         Marcador.instance = this
     }
+
+    newPlayer({newPlayer}) {
+        this.playerBase.push({newPlayer})
+        console.log(this.playerBase)
+    }
 }
+
+module.exports = Marcador

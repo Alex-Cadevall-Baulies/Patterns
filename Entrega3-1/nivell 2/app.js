@@ -1,26 +1,17 @@
-import { Jugadors } from "./jugadors.js";
-import { Marcador } from "./joc.js";
+const Jugadors = require("./jugadors.js")
+const Marcador = require("./joc.js");
+const data = require("./data.json")
 
-const registerPlayer = (username, email) => {
-    let player = {
-        "userId": userID = () => {
-            var result = '';
-            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-            var charactersLength = characters.length;
-            for (i = 0; i < 5; i++) {
-                result += characters.charAt(Math.floor(Math.random() * charactersLength))
-            }
-            return result + this.players.length;
-        },
-        "username": username,
-        "email": email
-    };
+const player = new Jugadors()
 
-    this.players.push(player)
-    console.log(`jugador creat: ${player}`)
-    return player
-};
+let username = data.username
+let email = data.email
 
+let newPlayer = player.registerPlayer({username, email});
+let playerArray = new Marcador()
+playerArray.newPlayer({newPlayer})
+
+/*
 const newScore = (game, username, score) => {
     const jugador = this.playerBase.filter((username) => { return username.username })
 
@@ -53,4 +44,4 @@ const checkPlayerList = () => {
 const checkScoreBoard = () => {
         console.log(this.marcador.join(''))
         return this.marcador.join('')
-    }
+    }*/
