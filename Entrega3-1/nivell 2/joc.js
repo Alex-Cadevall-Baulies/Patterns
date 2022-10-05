@@ -1,19 +1,13 @@
-const Jugadors = require("./jugadors.js")
+const Jugadors = require("./jugador.js")
 
 class Marcador {
 
     constructor() {
-        this.marcador = []
-        this.playerBase = []
+        
+        this.marcador = 
 
-        Object.freeze(this.marcador);
         Object.freeze(this);
         Marcador.instance = this
-    }
-
-    newPlayer({newPlayer}) {
-        this.playerBase.push({newPlayer})
-        console.log(this.playerBase)
     }
 }
 
