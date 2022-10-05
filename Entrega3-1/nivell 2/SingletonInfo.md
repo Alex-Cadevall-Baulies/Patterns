@@ -6,20 +6,16 @@
 
 ## app.js crida a les classes creades:
 - Registra jugadors [X]
-- Sap quins jugadors estan jugant
-- Guarda punts al marcador
-
-## marcador.js conté el singleton
+- Guarda/modifica punts al marcador [X]
 
 ## joc.js:
-- guarda info dels jugadors i marcador. 
-- marcador es una clase que conté:
-    - Patró singleton
-    - marcador del joc actual
-    - marcador general:
-        - guarda la info de tots els jocs i jugadors.
+- conté marcador [X]
+- conté classe singleton [X]
+- guarda info dels jugadors i marcador. [X]
+- mostra el guanyador []
 
-## jugadors.js conté informació dels jugadors [X]
+## jugadors.js conté informació dels jugadors:
+- s'usa per crear jugadors [X]
 
 # Singleton: 
 - https://www.youtube.com/watch?v=C2NxMWQn85c
