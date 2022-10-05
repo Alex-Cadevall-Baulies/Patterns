@@ -7,5 +7,10 @@
     "player2": {
         "username": "Ramón",
         "email": "ra42@gmail.com"
+    },
+
+    "player3": {
+        "username": "Loretta",
+        "email": "laLora@gmail.com"
     }
 }

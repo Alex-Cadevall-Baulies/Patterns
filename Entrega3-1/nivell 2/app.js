@@ -6,7 +6,16 @@ const data = require("./data.json")
 
 const player = new Jugador(data.player1.username, data.player1.email)
 const player2 = new Jugador(data.player2.username, data.player2.email)
+const player3 = new Jugador(data.player3.username, data.player3.email)
 
+
+
+const marcador1 = new Marcador("badminton", player, 10)
+const marcador2 = new Marcador("badminton", player, 20)
+const marcador3 = new Marcador("badminton", player2, 15)
+const marcador4 = new Marcador("escacs", player2, 1)
+const marcador5 = new Marcador("badminton", player3, 5)
+const marcador6 = new Marcador("escacs", player3, 0)
 
 
 /*

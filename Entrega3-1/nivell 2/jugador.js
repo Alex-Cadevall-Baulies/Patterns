@@ -1,10 +1,12 @@
 class Jugador {
     constructor (username, email) {
-        this.player = {
+        let player = {
             "userId": this.userID(),
             "username": username,
             "email": email
         };
+
+        this.player = player
 
         console.log("jugador creat: " + JSON.stringify(player))
         return player
