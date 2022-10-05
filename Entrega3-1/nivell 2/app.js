@@ -1,17 +1,19 @@
-const Jugadors = require("./jugadors.js")
+const Jugador = require("./jugador.js")
 const Marcador = require("./joc.js");
 const data = require("./data.json")
 
-const player = new Jugadors()
 
-let username = data.username
-let email = data.email
 
-let newPlayer = player.registerPlayer({username, email});
-let playerArray = new Marcador()
-playerArray.newPlayer({newPlayer})
+const player = new Jugador(data.player1.username, data.player1.email)
+const player2 = new Jugador(data.player2.username, data.player2.email)
+
+
 
 /*
+let playerArray = new Marcador
+playerArray.add(newPlayer)
+console.log(playerArray);
+
 const newScore = (game, username, score) => {
     const jugador = this.playerBase.filter((username) => { return username.username })
 

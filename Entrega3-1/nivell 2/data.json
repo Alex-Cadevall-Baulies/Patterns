@@ -1,4 +1,11 @@
 {
-    "username" : "Renata",
-    "email" : "Rena2@gmail.com"
+    "player1": {
+        "username": "Renata",
+        "email": "rena2@gmail.com"
+    },
+
+    "player2": {
+        "username": "Ramón",
+        "email": "ra42@gmail.com"
+    }
 }

@@ -5,7 +5,7 @@
 
 
 ## app.js crida a les classes creades:
-- Registra jugadors
+- Registra jugadors [X]
 - Sap quins jugadors estan jugant
 - Guarda punts al marcador
 
@@ -19,7 +19,7 @@
     - marcador general:
         - guarda la info de tots els jocs i jugadors.
 
-## jugadors.js conté informació dels jugadors
+## jugadors.js conté informació dels jugadors [X]
 
 # Singleton: 
 - https://www.youtube.com/watch?v=C2NxMWQn85c
