@@ -18,7 +18,7 @@ marcador.addScore("escacs", player3, 0)
 
 console.log(marcador.scoreboard)
 
-
+marcador.findWinner()
 
 /*
 let playerArray = new Marcador
