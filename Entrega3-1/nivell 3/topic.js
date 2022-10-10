@@ -6,8 +6,11 @@ class Topic {
             "titol": title,
             "creador": user,
             "descripció": content,
+            "subscripcions": [],
             "comentaris": []
         }]
+
+        console.log(`${this.topic.titol}, creat!`)
 
     }
 
@@ -24,6 +27,12 @@ class Topic {
 
     checkTopic(){
         console.log(this.topic)
+    }
+
+    subscribe(user){
+        this.topic.subscriptions.push(user)
+
+        console.log(`${user}, t'has subscrit correctament a ${this.topic.titol}`)
     }
 
 }
