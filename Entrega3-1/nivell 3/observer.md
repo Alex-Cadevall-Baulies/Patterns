@@ -20,9 +20,9 @@ Els [usuaris] subscrits al mateix [tema] també rebrán [alerta]
 * Utilitza módul events (https://www.w3schools.com/nodejs/nodejs_events.asp)
  
 ## Funcions:
-- funció creació d'usuari []
+- funció creació d'usuari [X]
     - usuari x registrat!
-- funció creació tema []
+- funció creació tema [X]
     - Tema x iniciat
 - funció subscripció []
     - Felicitats x, t'has subscrit a x tema
