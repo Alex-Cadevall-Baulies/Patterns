@@ -2,15 +2,25 @@ class Topic {
 
     constructor(title, user, content) {
 
-        this.topic = [{
+        this.topic = {
             "titol": title,
             "creador": user,
             "descripció": content,
-            "subscripcions": [],
+            "subscriptors": [user],
             "comentaris": []
-        }]
+        }
 
-        console.log(`${this.topic.titol}, creat!`)
+        console.log(`Nou tema: ${this.topic.titol}, creat!`)
+
+        constructor.prototype = {
+            subscribe: function (user) {
+                this.topic.subscriptors.push(user)
+                console.log(`${user}, t'has subscrit correctament a ${this.topic.titol}`)
+        
+                this.topic.subscriptors.forEach((subscriptors) => {console.log(`Hola ${subscriptors}, ${user} s'ha subscrit`)})
+            }
+    
+        }
 
     }
 
@@ -22,18 +32,14 @@ class Topic {
         }
         
         this.topic.comentaris.push(newMessage)
-        console.log(`Missatge registrat ${user}!`)
+        console.log(`Nou registrat per ${user}!`)
+
+        this.topic.subscriptors.forEach((subscriptors) => {console.log(`Hola ${subscriptors}, ${user} ha registrat el seguent comentari: ${message}`)})
     }
 
     checkTopic(){
         console.log(this.topic)
     }
-
-    subscribe(user){
-        this.topic.subscriptions.push(user)
-
-        console.log(`${user}, t'has subscrit correctament a ${this.topic.titol}`)
-    }
-
 }
+
 module.exports = Topic
