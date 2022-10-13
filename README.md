@@ -5,6 +5,8 @@
 
 ## Entrega 3.1 - Patterns 1
 - [x] Nivell 1
+- [x] Nivell 2
+- [x] Nivell 3
 
 ## Entrega 3.2 - Patterns 2
 - [x] Nivell 1
