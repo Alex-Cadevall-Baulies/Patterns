@@ -13,3 +13,4 @@ topicOne.subscribe(userTwo)
 topicOne.addMessage(userTwo, 'Totalment en desacord, clarament no has llegir prou ornitologia')
 topicOne.checkTopic()
 topicTwo.checkTopic()
+
