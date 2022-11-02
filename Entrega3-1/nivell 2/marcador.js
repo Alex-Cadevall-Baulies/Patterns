@@ -1,5 +1,3 @@
-const Jugadors = require("./jugador.js")
-
 class Marcador {
 
     constructor() {

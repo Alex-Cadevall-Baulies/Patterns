@@ -1,5 +1,5 @@
 const Jugador = require("./jugador.js")
-const Marcador = require("./joc.js");
+const Marcador = require("./marcador.js");
 const data = require("./data.json")
 
 
